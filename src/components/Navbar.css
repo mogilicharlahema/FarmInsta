@@ -1,6 +1,6 @@
-/* navbar.css */
+/* General navbar styles */
 nav {
-    padding: 10px 20px; /* Added horizontal padding */
+    padding: 10px 20px;
     background: rgba(0, 0, 0, 0.8);
     color: wheat;
     position: sticky;
@@ -8,10 +8,24 @@ nav {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Center the logo and nav items vertically */
+    align-items: center;
 }
 
-/* Adjusted ul to align better with the logo */
+/* Logo styles */
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Container for logo */
+nav .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar links container */
 nav ul {
     display: flex;
     justify-content: center;
@@ -21,7 +35,7 @@ nav ul {
     flex-grow: 1;
 }
 
-/* Ensure the logo and nav items have proper spacing */
+/* Navbar items */
 nav ul li {
     margin: 0 15px;
 }
@@ -38,16 +52,50 @@ nav ul li a:hover {
     color: blanchedalmond;
 }
 
-/* Adjusted the logo size and positioning */
-.logo {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    margin-right: 20px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Stack logo and nav items vertically on smaller screens */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Center the logo and adjust its size for smaller screens */
+    .logo {
+        height: 50px;
+        width: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust nav items for smaller screens */
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
 }
 
-/* Ensure logo stays aligned with nav items */
-nav .logo-container {
-    display: flex;
-    align-items: center;
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    nav {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
 }
+

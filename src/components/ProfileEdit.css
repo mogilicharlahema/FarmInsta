@@ -16,7 +16,6 @@
     color: #fff;
     font-style: italic;
     font-weight: 700;
-    
 }
 
 .profile-edit-container form {
@@ -28,8 +27,7 @@
 .profile-edit-container label {
     margin-bottom: 5px;
     font-weight: 600;
-    color:aliceblue;
-    
+    color: aliceblue;
 }
 
 .profile-edit-container input,
@@ -81,8 +79,58 @@
     background-color: #1a5f7a;
     transform: scale(1);
 }
-body{
+
+body {
     background-image: url(../images/profileeditback.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .profile-edit-container {
+        max-width: 90%; /* Increase max-width for medium screens */
+    }
+
+    .profile-edit-container h2 {
+        font-size: 24px; /* Adjust heading font size */
+    }
+
+    .profile-edit-container button {
+        font-size: 14px; /* Slightly smaller font size for buttons */
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-edit-container {
+        max-width: 95%; /* Increase max-width for smaller screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .profile-edit-container h2 {
+        font-size: 20px; /* Adjust heading font size */
+    }
+
+    .profile-edit-container input,
+    .profile-edit-container textarea,
+    .profile-edit-container button {
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-edit-container {
+        max-width: 100%; /* Full width for extra small screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .profile-edit-container h2 {
+        font-size: 18px; /* Adjust heading font size */
+    }
+
+    .profile-edit-container input,
+    .profile-edit-container textarea,
+    .profile-edit-container button {
+        font-size: 12px; /* Smaller font size for small screens */
+    }
 }
